@@ -1,2 +1,1 @@
-# tryon-models
-My pretrained models for virtual tryon. Similar to https://github.com/hasibzunair/cxr-predictor
+Demo code of Residual ACGPN for 2D virtual try-on. Modified from https://github.com/levindabhi/ACGPN.
