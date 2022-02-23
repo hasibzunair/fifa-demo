@@ -1,4 +1,4 @@
-## Residual ACGPN Demo
+## Demo (Under dev!!)
 Demo code of FIFA for image-based virtual try-on. More details coming soon.
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
