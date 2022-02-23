@@ -1,5 +1,5 @@
 ## Residual ACGPN Demo
-Demo code of Residual ACGPN for 2D virtual try-on.
+Demo code of FIFA for image-based virtual try-on. More details coming soon.
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 [![Open In Colab][colab-badge]](https://colab.research.google.com/github/hasibzunair/residual-acgpn-demo/blob/main/demo.ipynb)
