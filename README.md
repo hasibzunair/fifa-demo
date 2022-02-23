@@ -14,4 +14,4 @@ Demo code of FIFA for image-based virtual try-on. More details coming soon.
 
 ## Acknowledgements
 
-This inference codebase is modified from https://github.com/levindabhi/ACGPN to run custom models based on [ACGPN](https://arxiv.org/abs/2003.05863), for example a Residual ACGPN! The human parser and segmentation models are from https://github.com/hasibzunair/Self-Correction-Human-Parsing-for-ACGPN and https://github.com/hasibzunair/U-2-Net.
+This inference codebase is modified from https://github.com/levindabhi/ACGPN to run custom models. The human parser and segmentation models are from https://github.com/hasibzunair/Self-Correction-Human-Parsing-for-ACGPN and https://github.com/hasibzunair/U-2-Net.
