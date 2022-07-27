@@ -1,9 +1,10 @@
-## Demo (Under dev!!)
-Demo code of FIFA for image-based virtual try-on. More details coming soon.
+## Demo code for Fill in Fabrics: Body-Aware Self-Supervised Inpainting for Image-Based Virtual Try-On.
+
+
+Training details are [here](https://github.com/dktunited/fifa_train).
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 [![Open In Colab][colab-badge]](https://colab.research.google.com/github/hasibzunair/residual-acgpn-demo/blob/main/demo.ipynb)
-
 
 <p align="center">
     <a href="#"><img src="./media/vis.png"></a> <br/>
