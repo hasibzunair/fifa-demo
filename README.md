@@ -4,7 +4,7 @@
 Training details are [here](https://github.com/dktunited/fifa_train).
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
-[![Open In Colab][colab-badge]](https://colab.research.google.com/github/hasibzunair/residual-acgpn-demo/blob/main/demo.ipynb)
+[![Open In Colab][colab-badge]](https://colab.research.google.com/github/hasibzunair/vton-demo/blob/main/demo.ipynb)
 
 <p align="center">
     <a href="#"><img src="./media/vis.png"></a> <br/>
