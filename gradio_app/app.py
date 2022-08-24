@@ -21,7 +21,6 @@ else:
 print(f"####Using {device}.#####") 
 
 
-
 # Make directories
 os.system("mkdir ./Data_preprocessing")
 os.system("mkdir ./Data_preprocessing/test_color")
@@ -178,7 +177,7 @@ gr.Interface(
     inference,
     [gr.inputs.Image(type='file', label="Clothing Image"),
      gr.inputs.Image(type='file', label="Person Image"),
-     gr.inputs.Radio(choices=["yes","no"], label="Retrieve original background from the person image?", type='index')],
+     gr.inputs.Radio(choices=["yes","no"], default="no", label="Retrieve original background from the person image?")],
     gr.outputs.Image(type="file", label="Predicted Output"),
     examples=[["./sample_images/1/cloth.jpg", "./sample_images/1/person.jpg", "yes"],
               ["./sample_images/2/cloth.jpg", "./sample_images/2/person.jpg", "no"]],
