@@ -172,17 +172,16 @@ thumbnail = None # "./pathtothumbnail.png"
 
 # todos
 # train model with background removed then add feature, also add remove_bg in inferene()
-# add gr.inputs.Radio(choices=["yes","no"], default="no", label="Remove background from the person image?") in inputs
+# add gr.inputs.Radio(choices=["yes","no"], label="Remove background from the person image?", type='index') in inputs
     
 gr.Interface(
     inference,
-    [gr.inputs.Image(type='filepath', label="Clothing Image"),
-     gr.inputs.Image(type='filepath', label="Person Image"),
-     gr.inputs.Radio(choices=["yes","no"], default="no", label="Retrieve original background from the person image?")],
-    gr.outputs.Image(type="filepath", label="Predicted Output"),
-    examples=[["./sample_images/1/cloth.jpg", "./sample_images/1/person.jpg"],
-              ["./sample_images/2/cloth.jpg", "./sample_images/2/person.jpg"]],
-    cache_examples=False,
+    [gr.inputs.Image(type='file', label="Clothing Image"),
+     gr.inputs.Image(type='file', label="Person Image"),
+     gr.inputs.Radio(choices=["yes","no"], label="Retrieve original background from the person image?", type='index')],
+    gr.outputs.Image(type="file", label="Predicted Output"),
+    examples=[["./sample_images/1/cloth.jpg", "./sample_images/1/person.jpg", "yes"],
+              ["./sample_images/2/cloth.jpg", "./sample_images/2/person.jpg", "no"]],
     title=title,
     description=description,
     article=article,
