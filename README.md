@@ -1,12 +1,13 @@
-# Inference code of FIFA for Virtual Try-On ⚽
+# Demo of FIFA for Virtual Try-On ⚽
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
 [![Open In Colab][colab-badge]](https://colab.research.google.com/github/hasibzunair/vton-demo/blob/main/demo.ipynb)
 
-This is code for our paper (under review):
-*Fill in Fabrics: Body-Aware Self-Supervised Inpainting for Image-Based Virtual Try-On*
+This is official code for our BMVC 2022 paper:<br>
+[Fill in Fabrics: Body-Aware Self-Supervised Inpainting for Image-Based Virtual Try-On](https://arxiv.org/abs/2210.00918)
+<br>
 
-Training details available [here](https://github.com/dktunited/fifa_train).
+Training details available [fifa-tryon](https://github.com/hasibzunair/fifa-tryon).
 
 <p align="center">
     <a href="#"><img src="./media/vis.png"></a> <br/>

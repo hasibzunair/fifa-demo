@@ -57,9 +57,9 @@ if not os.path.exists("saved_models/u2net/u2net.pth"):
     os.system("wget -P saved_models/u2net/ https://github.com/hasibzunair/fifa-demo/releases/download/v1.0/u2net.pth")
 
 # Get model checkpoints
-if not os.path.exists("./checkpoints/decavtonfifapretrain/"):
-    os.system("wget -O ./checkpoints/decavtonfifapretrain.zip https://github.com/hasibzunair/vton-demo/releases/download/v1.0/decavtonfifapretrain.zip")
-    with zipfile.ZipFile('./checkpoints/decavtonfifapretrain.zip', 'r') as zip_ref:
+if not os.path.exists("./checkpoints/fifa_viton/"):
+    os.system("wget -O ./checkpoints/fifa_viton.zip https://github.com/hasibzunair/fifa-tryon/releases/download/v1.0-models/fifa_viton.zip")
+    with zipfile.ZipFile('./checkpoints/fifa_viton.zip', 'r') as zip_ref:
         zip_ref.extractall('./checkpoints/')
 
 print("########################Setup done!########################")
@@ -150,7 +150,7 @@ def inference(clothing_image, person_image, retrieve_bg):
         f.write('person.png cloth.png')
     
     # Do try-on
-    os.system("python test.py --name decavtonfifapretrain")
+    os.system("python test.py --name fifa_viton")
     tryon_image = Image.open("results/test/try-on/person.png")
     print("Size of image is: ", tryon_image.size)
     
