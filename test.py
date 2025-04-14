@@ -44,7 +44,7 @@ def generate_label_color(inputs):
 def complete_compose(img, mask, label):
     label = label.cpu().numpy()
     M_f = label > 0
-    M_f = M_f.astype(np.int)
+    M_f = M_f.astype(int)
     M_f = torch.FloatTensor(M_f).cuda()
     masked_img = img*(1-mask)
     M_c = (1-mask.cuda())*M_f
@@ -62,9 +62,9 @@ def compose(label, mask, color_mask, edge, color, noise):
 
 def changearm(old_label):
     label = old_label
-    arm1 = torch.FloatTensor((old_label.cpu().numpy() == 11).astype(np.int))
-    arm2 = torch.FloatTensor((old_label.cpu().numpy() == 13).astype(np.int))
-    noise = torch.FloatTensor((old_label.cpu().numpy() == 7).astype(np.int))
+    arm1 = torch.FloatTensor((old_label.cpu().numpy() == 11).astype(int))
+    arm2 = torch.FloatTensor((old_label.cpu().numpy() == 13).astype(int))
+    noise = torch.FloatTensor((old_label.cpu().numpy() == 7).astype(int))
     label = label*(1-arm1)+arm1*4
     label = label*(1-arm2)+arm2*4
     label = label*(1-noise)+noise*4
@@ -87,13 +87,13 @@ def main():
         # add gaussian noise channel
         # wash the label
         t_mask = torch.FloatTensor(
-            (data['label'].cpu().numpy() == 7).astype(np.float))
+            (data['label'].cpu().numpy() == 7).astype(float))
         #
         # data['label'] = data['label'] * (1 - t_mask) + t_mask * 4
         mask_clothes = torch.FloatTensor(
-            (data['label'].cpu().numpy() == 4).astype(np.int))
+            (data['label'].cpu().numpy() == 4).astype(int))
         mask_fore = torch.FloatTensor(
-            (data['label'].cpu().numpy() > 0).astype(np.int))
+            (data['label'].cpu().numpy() > 0).astype(int))
         img_fore = data['image'] * mask_fore
         img_fore_wc = img_fore * mask_fore
         all_clothes_label = changearm(data['label'])
